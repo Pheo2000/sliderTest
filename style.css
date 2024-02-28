@@ -1,0 +1,70 @@
+html {
+  position: relative;
+  height: 100%;
+}
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: clip;
+  touch-action: pan-y;
+}
+
+.slider-list {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition-duration: 300ms;
+  transform: translate3d(0px, 0px, 0px);
+  transition-delay: 0ms;
+}
+
+.slider-item {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.btnPrev,
+.btnNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  font-size: 30px;
+  user-select: none;
+}
+
+.btnPrev {
+  left: 0;
+  font-size: 50px;
+  color: blue;
+}
+
+.btnNext {
+  right: 0;
+  font-size: 50px;
+  color: blue;
+}
+
+.btn_disabled {
+  opacity: 0.5;
+  user-select: none;
+  cursor: default;
+}
